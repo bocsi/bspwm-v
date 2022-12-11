@@ -15,6 +15,8 @@ mv picom-ibhagwan-template ./srcpkgs/picom-ibhagwan
 ./xbps-src pkg picom-ibhagwan
 sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
 
+cd ..
+
 # Copy dotfiles
 if [ -d "/home/$user/.config" ] 
 then
