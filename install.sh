@@ -81,3 +81,6 @@ fc-cache -f
 
 # wallpapers
 cp -r /home/$user/bspwm-v/wallpapers/ /home/$user/Pictures/
+
+chmod +x /home/$user/.config/bspwm/bspwmrc
+chmod +x /home/$user/.config/sxhkd/sxhkdrc
