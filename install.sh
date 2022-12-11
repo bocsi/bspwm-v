@@ -86,4 +86,5 @@ cp -r /home/$user/bspwm-v/wallpapers/ /home/$user/Pictures/
 
 sudo chmod 777 /home/$user/.config/bspwm/bspwmrc  
 sudo chmod 755 /home/$user/.config/sxhkd/sxhkdrc
+chmod +x $HOME/.config/polybar/launch.sh
 
