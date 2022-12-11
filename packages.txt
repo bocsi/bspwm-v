@@ -9,7 +9,7 @@ libX11-devel
 libXft-devel
 libXinerama-devel
 libxcb-devel
-kitty
+rxvt-unicode
 make
 nano
 pixman-devel
