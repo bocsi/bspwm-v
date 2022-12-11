@@ -2,7 +2,7 @@
 
 #autostart
 sxhkd &
-polybar example &
+$HOME/.config/polybar/launch.sh &
 picom --experimental-backend &
 
 #Вworkspaces
