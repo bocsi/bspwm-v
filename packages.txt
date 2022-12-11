@@ -13,6 +13,7 @@ kitty
 make
 nano
 pixman-devel
+polybar
 Thunar
 unzip
 wget
