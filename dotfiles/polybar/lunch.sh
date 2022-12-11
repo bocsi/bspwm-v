@@ -7,7 +7,7 @@ polybar-msg cmd quit
 # killall -q polybar
 
 # Launch bar
-echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
+echo "---" | tee -a /tmp/polybar.log
 polybar bar 2>&1 | tee -a /tmp/polybar1.log & disown
 
 
