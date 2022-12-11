@@ -20,10 +20,10 @@ cd ..
 # Copy dotfiles
 if [ -d "/home/$user/.config" ] 
 then
-    cp -r .config/* "/home/$user/.config"
+    cp -r .dotfiles/* "/home/$user/.config"
 else
     mkdir "/home/$user/.config"
-    cp -r .config/* "/home/$user/.config"
+    cp -r dotfiles/* "/home/$user/.config"
 fi
 
 # fonts
