@@ -88,3 +88,6 @@ sudo chmod 777 /home/$user/.config/bspwm/bspwmrc
 sudo chmod 755 /home/$user/.config/sxhkd/sxhkdrc
 chmod +x $HOME/.config/polybar/launch.sh
 
+sudo ln -s /etc/sv/qemu-ga /var/service/
+sudo ln -s /etc/sv/spice-vdagentd /var/service/
+
