@@ -84,8 +84,8 @@ fc-cache -f
 # wallpapers
 cp -r /home/$user/bspwm-v/wallpapers/ /home/$user/Pictures/
 
-chmod +x /home/$user/.config/bspwm/bspwmrc
-chmod +x /home/$user/.config/sxhkd/sxhkdrc
+sudo chmod 777 /home/$user/.config/bspwm/bspwmrc  
+sudo chmod 755 /home/$user/.config/sxhkd/sxhkdrc
 
 cp /etc/X11/xinit/xinitrc /home/$user/.xinitrc
 
