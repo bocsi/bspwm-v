@@ -4,18 +4,18 @@ for i in `cat packages.txt` ; do sudo xbps-install -Sy $i; done
 user=$(whoami)
 
 # picom
-#git clone --depth=1 https://github.com/void-linux/void-packages
-#cd void-packages
-#./xbps-src binary-bootstrap
-#echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
+git clone --depth=1 https://github.com/void-linux/void-packages
+cd void-packages
+./xbps-src binary-bootstrap
+echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
 
-#git clone https://github.com/ibhagwan/picom-ibhagwan-template
-#mv picom-ibhagwan-template ./srcpkgs/picom-ibhagwan
+git clone https://github.com/ibhagwan/picom-ibhagwan-template
+mv picom-ibhagwan-template ./srcpkgs/picom-ibhagwan
 
-#./xbps-src pkg picom-ibhagwan
-#sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
+./xbps-src pkg picom-ibhagwan
+sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
 
-#cd ..
+cd ..
 
 # Copy dotfiles
 if [ -d "/home/$user/.config" ] 
@@ -86,6 +86,4 @@ cp -r /home/$user/bspwm-v/wallpapers/ /home/$user/Pictures/
 
 sudo chmod 777 /home/$user/.config/bspwm/bspwmrc  
 sudo chmod 755 /home/$user/.config/sxhkd/sxhkdrc
-
-cp /etc/X11/xinit/xinitrc /home/$user/.xinitrc
 
