@@ -1,0 +1,20 @@
+#!/bin/bash
+
+volume_pa() {
+	muted=$(pactl list sinks | awk '/Mute:/ { print $2 }')
+        vol=$(pactl list sinks | grep Volume: | awk 'FNR == 1 { print $5 }' | cut -f1 -d '%')
+
+        if [ "$muted" = "yes" ]; then
+                echo "^c#e67e80^婢 "
+        else
+            	if [ "$vol" -ge 65 ]; then
+                        echo "^c#5a93a2^ ^c#d8caac^$vol% "
+                elif [ "$vol" -ge 40 ]; then
+                        echo "^c#5a93a2^ ^c#d8caac^$vol% "
+                elif [ "$vol" -ge 0 ]; then
+                        echo "^c#5a93a2^ ^c#d8caac^$vol% "     
+                fi
+        fi
+
+}
+volume_pa

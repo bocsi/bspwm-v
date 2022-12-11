@@ -1,0 +1,50 @@
+#!/bin/bash
+
+declare -i id=5337561 # your city id. To get it: got to https://openweathermap.org/, search for your city, the last 7 digits in the link will be your city id.
+api_key="c2a1840125d3bf08d86133c6ddbe0b3c" # api key from https://openweathermap.org/, you get it for free when you sign up.
+
+temp=$(curl "https://api.openweathermap.org/data/2.5/weather?id=$id&appid=$api_key&units=imperial" | jq ."main|.temp" | awk '{print int($1+0.5)}')
+iconid=$(curl "https://api.openweathermap.org/data/2.5/weather?id=$id&appid=$api_key&units=imperial" | jq -r ."weather[0]|.icon")
+
+get_weather()
+{
+    if [[ "$iconid" = "01n" ]]; then # Clear sky - night
+        icon="^c#d9bb80^"
+    elif [[ "$iconid" = "01d" ]]; then # Clear sky - day
+        icon="^c#e6d175^"
+    elif [[ "$iconid" = "02d" ]]; then # Few clouds (11-25%) - day
+        icon="^c#e3ebbb^"
+    elif [[ "$iconid" = "02n" ]]; then # Few clouds (11-25%) - night
+        icon="^c#80cbd9^"
+    elif [[ "$iconid" = "03d" ]]; then # Scattered clouds - day
+        icon="^c#bbcbeb^"
+    elif [[ "$iconid" = "03n" ]]; then # Scattered clouds - night
+        icon="^c#bbcbeb^"
+    elif [[ "$iconid" = "04d" ]]; then # Overcast clouds - day
+        icon="^c#e3ebbb^"
+    elif [[ "$iconid" = "04n" ]]; then # Overcast clouds - night
+        icon="^c#80cbd9^"
+    elif [[ "$iconid" = "09d" ]]; then # Shower rain - day
+        icon="^c#809ed9^"
+    elif [[ "$iconid" = "09n" ]]; then # Shower rain - night
+        icon="^c#809ed9^"
+    elif [[ "$iconid" = "10d" ]]; then # Moderate / heavy rain - day
+        icon="^c#809ed9^"
+    elif [[ "$iconid" = "10n" ]]; then # Moderate / heavy rain - night
+        icon="^c#809ed9^"
+    elif [[ "$iconid" = "11d" ]]; then # Thunderstorm - day
+        icon="^c#f2f5fb^"
+    elif [[ "$iconid" = "11n" ]]; then # Thunderstorm - night
+        icon="^c#f2f5fb^"
+    elif [[ "$iconid" = "13d" ]]; then # Snow - day
+        icon="^c#f2f5fb^"
+    elif [[ "$iconid" = "13n" ]]; then # Snow - night
+        icon="^c#f2f5fb^"
+    elif [[ "$iconid" = "50d" ]]; then # Fog - day
+        icon="^c#5a93a2^"
+    elif [[ "$iconid" = "50n" ]]; then # Fog - night
+        icon="^c#5a93a2^"
+    fi
+    echo "$icon" "^c#d8caac^$tempF"
+}
+get_weather
