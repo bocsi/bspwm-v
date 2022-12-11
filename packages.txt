@@ -11,6 +11,7 @@ libXinerama-devel
 libxcb-devel
 kitty
 make
+nano
 pixman-devel
 Thunar
 unzip
