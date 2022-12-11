@@ -30,3 +30,5 @@ xsetroot
 feh
 mesa
 xinit
+qemu-ga
+spice-vdagent
