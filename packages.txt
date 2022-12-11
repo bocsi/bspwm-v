@@ -28,3 +28,5 @@ mesa-dri
 xf86-video-qxl
 xsetroot
 feh
+mesa
+xinit
