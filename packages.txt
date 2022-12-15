@@ -2,7 +2,8 @@ base-devel
 bspwm
 sxhkd
 dunst
-gvfs
+ffmpegthumbnailer
+tumbler
 rofi
 flameshot
 firefox
