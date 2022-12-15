@@ -10,6 +10,6 @@ rm -rf Nordzy-icon
 # gtk theme
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme/
-./install.sh -l -c Dark -a alt -t yellow -i void --nord
+./install.sh -l -c Dark -a alt -i void --nord
 cd ..
 rm -rf WhiteSur-gtk-theme/
