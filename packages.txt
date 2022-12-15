@@ -34,3 +34,4 @@ mesa
 xinit
 qemu-ga
 spice-vdagent
+xed
