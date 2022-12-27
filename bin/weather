@@ -5,24 +5,24 @@ api_key="c2a1840125d3bf08d86133c6ddbe0b3c" # api key from https://openweathermap
 icon_id=$(curl -sf "https://api.openweathermap.org/data/2.5/weather?id=$id&appid=$api_key&units=imperial" | jq -r ."weather[0]|.icon")
 temp=$(curl -sf "https://api.openweathermap.org/data/2.5/weather?id=$id&appid=$api_key&units=imperial" | jq ."main.temp" | awk '{print int($1+0.5)}')
 case $icon_id in
-	01d) icon=" ";;
-	01n) icon=" ";;
-	02d) icon=" ";;
-	02n) icon=" ";;
-	03n) icon=" ";;
-	03d) icon=" ";;
-	04n) icon=" ";;
-	04d) icon=" ";;
-	09d) icon=" ";;
-	09n) icon=" ";;
-	10d) icon=" ";;
-	10n) icon=" ";;
-	11d) icon=" ";;
-	11n) icon=" ";;
-	13d) icon=" ";;
-	13n) icon=" ";;
-	50d) icon=" ";;
-	50n) icon=" ";;
+	01d) icon="%{F#e6d175} %{F-}";;
+	01n) icon="%{F#d9bb80} %{F-}";;
+	02d) icon="%{F#e3ebbb} %{F-}";;
+	02n) icon="%{F#80cbd9} %{F-}";;
+	03d) icon="%{F#bbcbeb} %{F-}";;
+	03n) icon="%{F#83a4b6} %{F-}";;
+	04d) icon="%{F#e3ebbb} %{F-}";;
+	04n) icon="%{F#83a4b6} %{F-}";;
+	09d) icon="%{F#809ed9} %{F-}";;
+	09n) icon="%{F#83a4b6} %{F-}";;
+	10d) icon="%{F#809ed9} %{F-}";;
+	10n) icon="%{F#83a4b6} %{F-}";;
+	11d) icon="%{F#f2f5fb} %{F-}";;
+	11n) icon="%{F#83a4b6} %{F-}";;
+	13d) icon="%{F#f2f5fb} %{F-}";;
+	13n) icon="%{F#83a4b6} %{F-}";;
+	50d) icon="%{F#f2f5fb} %{F-}";;
+	50n) icon="%{F#83a4b6} %{F-}";;
 	*) icon="$icon_id";;
 esac
 
