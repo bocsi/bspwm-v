@@ -11,6 +11,7 @@ libX11-devel
 libXft-devel
 libXinerama-devel
 libxcb-devel
+light
 rxvt-unicode
 make
 nano
