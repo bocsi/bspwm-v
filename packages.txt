@@ -36,3 +36,4 @@ xinit
 qemu-ga
 spice-vdagent
 geany
+pavucontrol
