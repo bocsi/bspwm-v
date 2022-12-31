@@ -40,3 +40,4 @@ geany
 pavucontrol
 jq
 curl
+thunar-archive-plugin
