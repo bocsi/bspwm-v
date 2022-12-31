@@ -1,31 +1,17 @@
 #!/bin/bash
+currentdir=$(pwd)
 for i in `cat packages.txt` ; do sudo xbps-install -Sy $i; done
 
-user=$(whoami)
-
-# picom
-#git clone --depth=1 https://github.com/void-linux/void-packages
-#cd void-packages
-#./xbps-src binary-bootstrap
-#echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
-
-#git clone https://github.com/ibhagwan/picom-ibhagwan-template
-#mv picom-ibhagwan-template ./srcpkgs/picom-ibhagwan
-
-#./xbps-src pkg picom-ibhagwan
-#sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
-
-#cd ..
+cp .bashrc "$HOME/"
 
 # Copy dotfiles
-if [ -d "/home/$user/.config" ] 
+if [ -d "$HOME/.config" ] 
 then
-    cp -r .dotfiles/* "/home/$user/.config"
+    cp -r .dotfiles/* "$HOME/.config"
 else
-    mkdir "/home/$user/.config"
-    cp -r dotfiles/* "/home/$user/.config"
+    mkdir "$HOME/.config"
+    cp -r dotfiles/* "$HOME/.config"
 fi
-#!/bin/bash
 
 # fonts
 # Fira Code Nerd font
@@ -52,41 +38,41 @@ else
     cp -r font/* "$HOME/.fonts/WeatherIcons"
 fi
 
-cd "/home/$user/bspwm-v"
+cd "$currentdir"
 
-if [ -d "/home/$user/.icons" ] 
+if [ -d "$HOME/.icons" ] 
 then
-    cp -r icons/* "/home/$user/.icons/"
+    cp -r icons/* "$HOME/.icons/"
 else
-    mkdir "/home/$user/.icons"
-    cp -r icons/* "/home/$user/.icons/"
+    mkdir "$HOME/.icons"
+    cp -r icons/* "$HOME/.icons/"
 fi
 
-if [ -d "/home/$user/.local" ] 
+if [ -d "$HOME/.local" ] 
 then
-    mkdir "/home/$user/.local/bin"
-    cp -r bin/* "/home/$user/.local/bin"
+    mkdir "$HOME/.local/bin"
+    cp -r bin/* "$HOME/.local/bin"
 else
-    mkdir "/home/$user/.local"
-    mkdir "/home/$user/.local/bin"
-    cp -r bin/*  "/home/$user/.local/bin"
+    mkdir "$HOME/.local"
+    mkdir "$HOME/.local/bin"
+    cp -r bin/*  "$HOME/.local/bin"
 fi
 
 rm -rf weather-icons
 rm -rf FiraCode.zip
 
 
-cd "/home/$user/.local/bin"
-for x in `ls /home/$user/.local/bin` ; do chmod +x $x; done
+cd "$HOME/.local/bin"
+for x in `ls $HOME/.local/bin` ; do chmod +x $x; done
 
-cd "/home/$user/bspwm-v"
+cd "$currentdir"
 fc-cache -f
 
 # wallpapers
-cp -r /home/$user/bspwm-v/wallpapers/ /home/$user/Pictures/
+cp -r $HOME/bspwm-v/wallpapers/ $HOME/Pictures/
 
-chmod +x /home/$user/.config/bspwm/bspwmrc  
-chmod 755 /home/$user/.config/sxhkd/sxhkdrc
+chmod +x $HOME/.config/bspwm/bspwmrc  
+chmod 755 $HOME/.config/sxhkd/sxhkdrc
 chmod +x $HOME/.config/polybar/launch.sh
 
 sudo ln -s /etc/sv/qemu-ga /var/service/
