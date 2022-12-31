@@ -41,3 +41,4 @@ jq
 curl
 thunar-archive-plugin
 xarchiver
+unzip
