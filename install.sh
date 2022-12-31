@@ -32,11 +32,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 if [ -d "/home/$user/.fonts" ] 
 then
     mkdir "/home/$user/.fonts/FiraCode"
-    unzip FiraCode.zip -d "/home/$user/.fonts/FiraCode"
+    xarchiver FiraCode.zip -d "/home/$user/.fonts/FiraCode"
 else
     mkdir "/home/$user/.fonts"
     mkdir "/home/$user/.fonts/FiraCode"
-    unzip FiraCode.zip -d "/home/$user/.fonts/FiraCode"
+    xarchiver FiraCode.zip -d "/home/$user/.fonts/FiraCode"
 fi
 # weather icons
 git clone https://github.com/erikflowers/weather-icons.git
@@ -90,4 +90,3 @@ chmod +x $HOME/.config/polybar/launch.sh
 
 sudo ln -s /etc/sv/qemu-ga /var/service/
 sudo ln -s /etc/sv/spice-vdagentd /var/service/
-
