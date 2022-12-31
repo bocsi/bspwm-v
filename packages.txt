@@ -4,6 +4,7 @@ sxhkd
 dunst
 ffmpegthumbnailer
 tumbler
+cava
 rofi
 flameshot
 firefox
@@ -37,3 +38,5 @@ qemu-ga
 spice-vdagent
 geany
 pavucontrol
+jq
+curl
