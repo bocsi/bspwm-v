@@ -25,30 +25,31 @@ else
     mkdir "/home/$user/.config"
     cp -r dotfiles/* "/home/$user/.config"
 fi
+#!/bin/bash
 
 # fonts
 # Fira Code Nerd font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-if [ -d "/home/$user/.fonts" ] 
+if [ -d "$HOME/.fonts" ]
 then
-    mkdir "/home/$user/.fonts/FiraCode"
-    xarchiver FiraCode.zip -d "/home/$user/.fonts/FiraCode"
+    mkdir "$HOME/.fonts/FiraCode"
+    xarchiver FiraCode.zip -d "$HOME/.fonts/FiraCode"
 else
-    mkdir "/home/$user/.fonts"
-    mkdir "/home/$user/.fonts/FiraCode"
-    xarchiver FiraCode.zip -d "/home/$user/.fonts/FiraCode"
+    mkdir "$HOME/.fonts"
+    mkdir "$HOME/.fonts/FiraCode"
+    xarchiver FiraCode.zip -d "$HOME/.fonts/FiraCode"
 fi
 # weather icons
 git clone https://github.com/erikflowers/weather-icons.git
 cd weather-icons
-if [ -d "/home/$user/.fonts" ] 
+if [ -d "$HOME/.fonts" ]
 then
-    mkdir "/home/$user/.fonts/WeatherIcons"
-    cp -r font/* "/home/$user/.fonts/WeatherIcons"
+    mkdir "$HOME/.fonts/WeatherIcons"
+    cp -r font/* "$HOME/.fonts/WeatherIcons"
 else
-    mkdir "/home/$user/.fonts"
-    mkdir "/home/$user/.fonts/WeatherIcons"
-    cp -r font/* "/home/$user/.fonts/WeatherIcons"
+    mkdir "$HOME/.fonts"
+    mkdir "$HOME/.fonts/WeatherIcons"
+    cp -r font/* "$HOME/.fonts/WeatherIcons"
 fi
 
 cd "/home/$user/bspwm-v"
