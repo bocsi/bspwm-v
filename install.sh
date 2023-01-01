@@ -19,11 +19,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 if [ -d "$HOME/.fonts" ]
 then
     mkdir "$HOME/.fonts/FiraCode"
-    xarchiver FiraCode.zip -d "$HOME/.fonts/FiraCode"
+    unzip FiraCode.zip -d "$HOME/.fonts/FiraCode"
 else
     mkdir "$HOME/.fonts"
     mkdir "$HOME/.fonts/FiraCode"
-    xarchiver FiraCode.zip -d "$HOME/.fonts/FiraCode"
+    unzip FiraCode.zip -d "$HOME/.fonts/FiraCode"
 fi
 # weather icons
 git clone https://github.com/erikflowers/weather-icons.git
