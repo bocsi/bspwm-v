@@ -1,6 +1,0 @@
-#!/bin/bash
-clock() {
-	dte=$(date +"%a %d","%H:%M")
-        echo "^c#dbbc7f^ $dte"
-}
-clock
