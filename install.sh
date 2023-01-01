@@ -1,5 +1,6 @@
 #!/bin/bash
 currentdir=$(pwd)
+user=$(whoami)
 for i in `cat packages.txt` ; do sudo xbps-install -Sy $i; done
 
 cp .bashrc "$HOME/"
@@ -77,3 +78,6 @@ chmod +x $HOME/.config/polybar/launch.sh
 
 sudo ln -s /etc/sv/qemu-ga /var/service/
 sudo ln -s /etc/sv/spice-vdagentd /var/service/
+
+# add user to video group, necessary for changing screen brightness
+sudo usermod -aG video $user
