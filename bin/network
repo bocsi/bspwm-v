@@ -1,0 +1,9 @@
+#!/bin/bash
+
+connection=$(ip route | awk '/default/ { print substr($5,1,1) }')
+
+case $connection in
+        e) echo "%{F#7fbbb3} %{F-}易";;
+        w) echo "%{F#83b6af} %{F-}";;
+        *) echo "%{F#6d8592} %{F-}";;
+esac

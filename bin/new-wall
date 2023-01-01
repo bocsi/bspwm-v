@@ -1,0 +1,25 @@
+#!/bin/bash
+# relies on you having at least 2 wallpapers in the $HOME/Pictures/wallpapers folder
+# script to change wallpaper. Will create a directory in "Picture" named "current_wall", put a .txt file,
+# and add the wallpaper that is curently set - to make sure it changes the wallpaper to a different one.
+user=$(whoami)
+wallpaperdir="/home/$user/Pictures/wallpapers"
+walldir="/home/$user/Pictures/current"
+current_wall_dir="/home/$user/Pictures/current/wallpaper.txt"
+wallpaper=$(ls $wallpaperdir | shuf -n1)
+
+if [[ -d $walldir ]]
+then
+current_wall=$(cat "/home/$user/Pictures/current/wallpaper.txt")
+    while [ "$current_wall" = "$wallpaper" ]
+    do
+      wallpaper=$(ls $wallpaperdir | shuf -n1)
+    done &&
+    feh --bg-scale "$wallpaperdir/$wallpaper"
+    echo "$wallpaper" > "$current_wall_dir"
+else
+    mkdir "/home/$user/Pictures/current"
+    touch $current_wall_dir
+    feh --bg-scale $wallpaperdir/$wallpaper
+    echo "$wallpaper" > "$current_wall_dir"
+fi
