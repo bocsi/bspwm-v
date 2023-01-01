@@ -1,0 +1,65 @@
+!! Colorscheme
+! special
+*.foreground: #d3c6aa
+*.background: #293136
+*.cursorColor: #d3c6aa
+
+! black
+*.color0: #3c474d
+*.color8: #868d80
+
+! red
+*.color1: #e68183
+*.color9: #e68183
+
+! green
+*.color2: #a7c080
+*.color10: #a7c080
+
+! yellow
+*.color3: #d9bb80
+*.color11: #d9bb80
+
+! blue
+*.color4: #83b6af
+*.color12: #83b6af
+
+! magenta
+*.color5: #d39bb6
+*.color13: #d39bb6
+
+! cyan
+*.color6: #87c095
+*.color14: #87c095
+
+! white
+*.color7: #868d80
+*.color15: #868d80
+
+!! URxvt Appearance
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 32
+URxvt.iso14755: false
+
+*.font: xft:FiraCode Nerd Font:style=Regular:size=16
+URxvt.font: xft:FiraCode Nerd Font:style=Regular:size=12:minspace=False,\
+			xft:Font Awesome 6 Free,\
+            xft:Font Awesome 6 Free Solid,\
+            xft:Font Awesome 6 Brands
+*.boldFont: xft:FiraCode Nerd Font:style=Bold:size=16
+*.italicFont: xft:FiraCode Nerd Font:style=Italic:size=12
+*.boldItalicFont: xft:FiraCode Nerd Font:style=Bold Italic:size=12
+
+Xft*dpi:	96
+Xft*antialias:	true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint:
+
+urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+urxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
