@@ -1,0 +1,37 @@
+[general]
+
+framerate = 60
+# The number of bars (0-200). 0 sets it to auto (fill up console).
+# For SDL width and space between bars is in pixels, defaults are:
+; bar_width = 20
+; bar_spacing = 5
+sleep_timer = 60
+
+[input]
+method = pulse
+
+[color]
+# default is to keep current terminal color
+; background = default
+; foreground = default
+
+# Gradient mode, only hex defined colors are supported,
+# background must also be defined in hex or remain commented out. 1 = on, 0 = off.
+# You can define as many as 8 different colors. They range from bottom to top of screen
+gradient = 1
+gradient_count = 7
+gradient_color_1 = '#83c092'
+gradient_color_2 = '#8fc69c'
+gradient_color_3 = '#9bcca7'
+gradient_color_4 = '#a8d2b2'
+gradient_color_5 = '#b4d9bd'
+gradient_color_6 = '#c1dfc8'
+gradient_color_7 = '#cde5d3'
+
+
+
+[smoothing]
+# Noise reduction, float 0 - 1. default 0.77
+# the raw visualization is very noisy, this factor adjusts the integral and gravity filters to keep the signal smooth
+# 1 will be very slow and smooth, 0 will be fast but noisy.
+noise_reduction = 0.8
