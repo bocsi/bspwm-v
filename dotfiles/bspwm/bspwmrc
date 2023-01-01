@@ -3,9 +3,10 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh &
 $HOME/.local/bin/new-wall &
+systemctl --user import-environment DISPLAY &
 dunst &
 xsetroot -cursor_name left_ptr &
-#picom &
+#picom  --corner-radius 10 &
 
 bspc monitor -d      
 
