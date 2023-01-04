@@ -5,6 +5,13 @@ for i in `cat packages.txt` ; do sudo xbps-install -Sy $i; done
 
 cp .bashrc "$HOME/"
 
+if [ -d "$HOME/.config/gtk-4.0" ] 
+then
+    printf "gtk-4.0 directory exists"
+else
+    mkdir "$HOME/.config/gtk-4.0"
+fi
+
 # Copy dotfiles
 if [ -d "$HOME/.config" ] 
 then
@@ -68,20 +75,33 @@ for x in `ls $HOME/.local/bin` ; do chmod +x $x; done
 
 cd "$currentdir"
 fc-cache -f
+# themes
+#icon theme
+git clone https://github.com/alvatip/Nordzy-icon
+cd Nordzy-icon/
+./install.sh -t turquoise -c dark
+cd ..
+rm -rf Nordzy-icon
 
+# gtk theme
+https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
+cd Everforest-GTK-Theme
+cp -r themes/Everforest-Dark-BL/ $HOME/.themes
+ln -sf themes/Everforest-Dark-BL/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
+ln -sf themes/Everforest-Dark-BL/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
+ln -sf themes/Everforest-Dark-BL/gtk-4.0/assets ~/.config/gtk-4.0/
+rm -rf Everforest-GTK-Theme
+cd "$currentdir"
 # wallpapers
-cp -r $HOME/bspwm-v/wallpapers/ $HOME/Pictures/
+cp -r $currentdir/wallpapers/ $HOME/Pictures/
 
+# bspwm + sxhkd
 chmod +x $HOME/.config/bspwm/bspwmrc  
-chmod 755 $HOME/.config/sxhkd/sxhkdrc
+chmod +x $HOME/.config/sxhkd/sxhkdrc
 chmod +x $HOME/.config/polybar/launch.sh
 
 sudo ln -s /etc/sv/qemu-ga /var/service/
 sudo ln -s /etc/sv/spice-vdagentd /var/service/
 
-chmod +x $HOME/.config/bspwm/bspwmrc
-chmod +x $HOME/.config/sxhkd/sxhkdrc
-
 # add user to video group, necessary for changing screen brightness
 sudo usermod -aG video $user
-
