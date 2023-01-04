@@ -8,8 +8,10 @@ cd ..
 rm -rf Nordzy-icon
 
 # gtk theme
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
-cd WhiteSur-gtk-theme/
-./install.sh -l -c Dark -a alt -i void --nord
-cd ..
-rm -rf WhiteSur-gtk-theme/
+https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
+cd Everforest-GTK-Theme
+cp -r themes/Everforest-Dark-BL/ $HOME/.themes
+ln -sf themes/Everforest-Dark-BL/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
+ln -sf themes/Everforest-Dark-BL/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
+ln -sf themes/Everforest-Dark-BL/gtk-4.0/assets ~/.config/gtk-4.0/
+rm -rf Everforest-GTK-Theme
