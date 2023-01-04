@@ -87,9 +87,9 @@ rm -rf Nordzy-icon
 https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
 cd Everforest-GTK-Theme
 cp -r themes/Everforest-Dark-BL/ $HOME/.themes
-ln -sf themes/Everforest-Dark-BL/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
-ln -sf themes/Everforest-Dark-BL/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
-ln -sf themes/Everforest-Dark-BL/gtk-4.0/assets ~/.config/gtk-4.0/
+ln -sf $HOME/.themes/Everforest-Dark-BL/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
+ln -sf $HOME/.themes/Everforest-Dark-BL/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
+ln -sf $HOME/.themes/Everforest-Dark-BL/gtk-4.0/assets ~/.config/gtk-4.0/assets
 rm -rf Everforest-GTK-Theme
 cd "$currentdir"
 # wallpapers
