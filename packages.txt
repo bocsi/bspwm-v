@@ -8,6 +8,7 @@ ffmpegthumbnailer
 firefox
 flameshot
 geany
+gtk-engine-murrine
 jq
 libX11-devel
 libxcb-devel
