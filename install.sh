@@ -79,5 +79,9 @@ chmod +x $HOME/.config/polybar/launch.sh
 sudo ln -s /etc/sv/qemu-ga /var/service/
 sudo ln -s /etc/sv/spice-vdagentd /var/service/
 
+chmod +x $HOME/.config/bspwm/bspwmrc
+chmod +x $HOME/.config/sxhkd/sxhkdrc
+
 # add user to video group, necessary for changing screen brightness
 sudo usermod -aG video $user
+
