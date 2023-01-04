@@ -3,6 +3,11 @@ inputbar {
   children: [entry];
 }
 
+window { 
+	location: center;
+	y-offset: 35px;
+}
+
 listview {
     enabled:                     true;
     columns:                     3;
@@ -16,10 +21,5 @@ listview {
 }
 element selected.normal {
     background-color:            #e69875;
-    text-color:                  #374247;
+    text-color:                  #333c43;
 }
-window { location:				 center;
-		 y-offset:				 38px;
-}
-
-configuration {font:                        "FiraCode Nerd Font 11";}
