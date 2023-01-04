@@ -84,7 +84,7 @@ cd ..
 rm -rf Nordzy-icon
 
 # gtk theme
-https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
+git clone https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
 cd Everforest-GTK-Theme
 cp -r themes/Everforest-Dark-BL/ $HOME/.themes
 ln -sf $HOME/.themes/Everforest-Dark-BL/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
