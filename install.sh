@@ -75,7 +75,8 @@ for x in `ls $HOME/.local/bin` ; do chmod +x $x; done
 
 cd "$currentdir"
 fc-cache -f
-# themes
+
+# looks
 #icon theme
 git clone https://github.com/alvatip/Nordzy-icon
 cd Nordzy-icon/
@@ -94,6 +95,12 @@ rm -rf Everforest-GTK-Theme
 cd "$currentdir"
 # wallpapers
 cp -r $currentdir/wallpapers/ $HOME/Pictures/
+
+# cursor theme
+wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.3/Bibata-Modern-Classic.tar.gz
+tar -xvf Bibata-Modern-Classic.tar.gz
+mv Bibata-Modern-Classic ~/.icons/
+rm -rf Bibata-*
 
 # bspwm + sxhkd
 chmod +x $HOME/.config/bspwm/bspwmrc  
