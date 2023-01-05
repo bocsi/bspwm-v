@@ -4,6 +4,8 @@ user=$(whoami)
 for i in `cat packages.txt` ; do sudo xbps-install -Sy $i; done
 
 cp .bashrc "$HOME/"
+cp .Xresources "$HOME/"
+cp .xinitrc "$HOME/"
 
 if [ -d "$HOME/.config/gtk-4.0" ] 
 then
