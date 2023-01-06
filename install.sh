@@ -13,6 +13,7 @@ cd picom
 git submodule update --init --recursive
 meson setup --buildtype=release . build
 ninja -C build
+ninja -C build install
 
 
 if [ -d "$HOME/.config/gtk-4.0" ] 
