@@ -26,7 +26,7 @@ fi
 # Copy dotfiles
 if [ -d "$HOME/.config" ] 
 then
-    cp -r .dotfiles/* "$HOME/.config"
+    cp -r dotfiles/* "$HOME/.config"
 else
     mkdir "$HOME/.config"
     cp -r dotfiles/* "$HOME/.config"
