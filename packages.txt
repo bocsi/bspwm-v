@@ -18,7 +18,9 @@ light
 make
 mesa
 mesa-dri
+meson
 nano
+ninja
 pavucontrol
 pixman-devel
 polybar
