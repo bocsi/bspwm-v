@@ -7,6 +7,14 @@ cp .bashrc "$HOME/"
 cp .Xresources "$HOME/"
 cp .xinitrc "$HOME/"
 
+# picom
+git clone https://github.com/yshui/picom.git
+cd picom
+git submodule update --init --recursive
+meson setup --buildtype=release . build
+ninja -C build
+
+
 if [ -d "$HOME/.config/gtk-4.0" ] 
 then
     printf "gtk-4.0 directory exists"
