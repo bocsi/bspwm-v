@@ -10,10 +10,17 @@ flameshot
 geany
 gtk-engine-murrine
 jq
+libconfig-devel
+libdbusmenu-gtk3-devel
+libev-devel
+libpcre2
+libglvnd
+libva-glx-devel
 libX11-devel
 libxcb-devel
 libXft-devel
 libXinerama-devel
+libXext-devel
 light
 make
 mesa
@@ -22,7 +29,7 @@ meson
 nano
 ninja
 pavucontrol
-pixman-devel
+pixman-devellibpcre2
 polybar
 qemu-ga
 rofi
@@ -40,6 +47,7 @@ xcb-util-renderutil-devel
 xdg-user-dirs
 xf86-video-qxl
 xinit
+xproto
 xorg-fonts
 xorg-minimal
 xorg-x11-proto-devel
