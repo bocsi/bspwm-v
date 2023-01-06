@@ -15,14 +15,6 @@ meson setup --buildtype=release . build
 ninja -C build
 ninja -C build install
 
-
-if [ -d "$HOME/.config/gtk-4.0" ] 
-then
-    printf "gtk-4.0 directory exists"
-else
-    mkdir "$HOME/.config/gtk-4.0"
-fi
-
 # Copy dotfiles
 if [ -d "$HOME/.config" ] 
 then
@@ -30,6 +22,13 @@ then
 else
     mkdir "$HOME/.config"
     cp -r dotfiles/* "$HOME/.config"
+fi
+
+if [ -d "$HOME/.config/gtk-4.0" ] 
+then
+    printf "gtk-4.0 directory exists"
+else
+    mkdir "$HOME/.config/gtk-4.0"
 fi
 
 # fonts
