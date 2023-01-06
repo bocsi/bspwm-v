@@ -87,6 +87,12 @@ cd "$currentdir"
 fc-cache -f
 
 # looks
+if [ -d "$HOME/.themes" ] 
+then
+    printf "themes folder exists"
+else
+    mkdir "$HOME/.themes"
+fi
 #icon theme
 git clone https://github.com/alvatip/Nordzy-icon
 cd Nordzy-icon/
