@@ -16,6 +16,7 @@ meson setup --buildtype=release . build
 ninja -C build
 ninja -C build install
 cd ..
+rm -rf picom
 
 # Copy dotfiles
 if [ -d "$HOME/.config" ] 
