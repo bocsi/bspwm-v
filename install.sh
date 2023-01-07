@@ -7,6 +7,7 @@ cp .bashrc "$HOME/"
 cp .Xresources "$HOME/"
 cp .xinitrc "$HOME/"
 xdg-user-dirs-update
+xrdb .Xresources
 
 # picom
 git clone https://github.com/yshui/picom.git
