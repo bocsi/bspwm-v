@@ -6,6 +6,7 @@ for i in `cat packages.txt` ; do sudo xbps-install -Sy $i; done
 cp .bashrc "$HOME/"
 cp .Xresources "$HOME/"
 cp .xinitrc "$HOME/"
+xdg-user-dirs-update
 
 # picom
 git clone https://github.com/yshui/picom.git
@@ -110,7 +111,7 @@ ln -sf $HOME/.themes/Everforest-Dark-BL/gtk-4.0/assets ~/.config/gtk-4.0/assets
 rm -rf Everforest-GTK-Theme
 cd "$currentdir"
 # wallpapers
-cp -r $currentdir/wallpapers/ $HOME/Pictures/
+cp -r $currentdir/wallpapers $HOME/Pictures/
 
 # cursor theme
 wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.3/Bibata-Modern-Classic.tar.gz
