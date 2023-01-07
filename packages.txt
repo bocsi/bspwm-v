@@ -49,6 +49,7 @@ xdg-user-dirs
 xf86-video-qxl
 xinit
 xproto
+xrdb
 xorg-fonts
 xorg-minimal
 xorg-x11-proto-devel
