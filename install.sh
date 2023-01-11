@@ -22,10 +22,10 @@ rm -rf picom
 # Copy dotfiles
 if [ -d "$HOME/.config" ] 
 then
-    cp -r dotfiles/* "$HOME/.config"
+    cp -r dotfiles/* "$HOME/.config/"
 else
     mkdir "$HOME/.config"
-    cp -r dotfiles/* "$HOME/.config"
+    cp -r dotfiles/* "$HOME/.config/"
 fi
 
 if [ -d "$HOME/.config/gtk-4.0" ] 
@@ -83,7 +83,6 @@ fi
 rm -rf weather-icons
 rm -rf FiraCode.zip
 
-
 cd "$HOME/.local/bin"
 for x in `ls $HOME/.local/bin` ; do chmod +x $x; done
 
@@ -103,7 +102,6 @@ cd Nordzy-icon/
 ./install.sh -t turquoise -c dark
 cd ..
 rm -rf Nordzy-icon
-
 # gtk theme
 git clone https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
 cd Everforest-GTK-Theme
@@ -115,7 +113,6 @@ rm -rf Everforest-GTK-Theme
 cd "$currentdir"
 # wallpapers
 cp -r $currentdir/wallpapers $HOME/Pictures/
-
 # cursor theme
 wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.3/Bibata-Modern-Classic.tar.gz
 tar -xvf Bibata-Modern-Classic.tar.gz
